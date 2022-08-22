@@ -1,38 +1,49 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homepage{
+  position: absolute;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr;
+  width:100%;
+}
+.homepagetop{
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background: azure;
+}
+.homepagemiddle{
+  position:unset;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listCard{
+  margin: 10px;
+  border-radius: 5px;
+  background-color: beige;
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: 1fr 0.4fr;
+  padding:10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.listCard .listCardUpper{
+  grid-row: 1/2;
+  grid-column: 1/-1;
 }
-
-.App-link {
-  color: #61dafb;
+.listCard .listCardLower{
+  grid-row: 2/3;
+  grid-column: 1/-1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listCard .itemname{
+  font-size: large;
+  color:gray;
+}
+.listCard .itemval{
+  font-size: large;
+  color:#1976d2;
+}
+.itemspacing{
+  margin:0px 10px;
 }
